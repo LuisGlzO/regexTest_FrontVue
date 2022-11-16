@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-text">{{ post.description }}</p>
-                        <button class="btn btn-primary" @click="openModal()">open (no funciona)</button>
+                        <button class="btn btn-primary" @click="openModal()">open (in process)</button>
                     </div>
                 </div>
             <!-- </div> -->
@@ -34,7 +34,7 @@ export default {
     methods:{
         async List(){
             this.ListaPosts = [];
-            console.log("hola vue");
+            // console.log("hola vue");
 
             fetch('http://127.0.0.1:8000/api/posts', {method: 'GET'})
             .then(respuesta=>respuesta.json())
@@ -50,7 +50,7 @@ export default {
                     this.ListaPosts.push(obj);
                 });
                 
-                console.log(this.ListaPosts);
+                // console.log(this.ListaPosts);
             })
             .catch(console.log)
 

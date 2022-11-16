@@ -3,7 +3,7 @@
         <div class="modal-wrapper">
             <div class="modal-container">
                 <div class="modal-body">
-                    <img class="image" src="http://127.0.0.1:8000/storage/postImages/20221113191815_jpg" alt="">
+                    <img class="image" src="" alt="">
                 </div>
                 <div class="modal-footer">
                     <slot name="footer">

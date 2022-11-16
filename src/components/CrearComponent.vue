@@ -29,7 +29,7 @@
                         </div>
                         <div class="btn-group" role="group" aria-label="">
                             <button type="button" class="btn btn-primary" @click="save()">Upload</button>
-                            <button type="button" class="btn btn-danger">Cancel</button>
+                            <button type="button" class="btn btn-danger" @click="back()">Cancel</button>
                         </div>
                     </form>
                 </div>
@@ -68,9 +68,10 @@ export default {
             axios.post('http://127.0.0.1:8000/api/posts', formData, {
                 headers: {"Content-Type": "multipart/form-data",},
 				})
-				.then((response) => {
-                    console.log(response);
-                    window.location.href='listar';
+				.then(() => {
+                    // console.log(response);
+                    // window.location.href='listar';
+                    this.back();
 				})
 				.catch((error) => {
 					console.log(error);
@@ -101,6 +102,9 @@ export default {
 				reader.onload= e =>{this.Img = e.target.result;}
 
                 this.post.image = e.target.files[0]
+        },
+        back(){
+            window.location.href='listar';
         }
     }
 }

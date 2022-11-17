@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "baseUrl": "https://beautiful-crostata-eb7b88.netlify.app/",
+    "baseUrl": "/",
     "moduleResolution": "node",
     "paths": {
       "@/*": [

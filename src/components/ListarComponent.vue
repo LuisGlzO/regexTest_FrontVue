@@ -36,7 +36,7 @@ export default {
             this.ListaPosts = [];
             // console.log("hola vue");
 
-            fetch('http://127.0.0.1:8000/api/posts', {method: 'GET'})
+            fetch('https://regexapitest-production.up.railway.app/api/posts', {method: 'GET'})
             .then(respuesta=>respuesta.json())
             .then((datosRespuesta)=>{
                 // console.log(datosRespuesta)
@@ -45,7 +45,7 @@ export default {
                         IdPost: element.id, 
                         title: element.title, 
                         description:element.description, 
-                        image: 'http://127.0.0.1:8000/' + element.image
+                        image: 'https://regexapitest-production.up.railway.app/' + element.image
                     }
                     this.ListaPosts.push(obj);
                 });

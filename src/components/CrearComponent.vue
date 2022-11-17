@@ -41,6 +41,7 @@
 
 <script>
 import axios from "axios";
+// import { threadId } from "worker_threads";
 
 export default {
     data(){
@@ -65,17 +66,20 @@ export default {
 
             formData.append('image',this.post.image);
 
-            axios.post('http://127.0.0.1:8000/api/posts', formData, {
+            axios.post('https://regexapitest-production.up.railway.app/api/posts', formData, {
                 headers: {"Content-Type": "multipart/form-data",},
 				})
 				.then(() => {
+                    // console.log("Luego de esto va la respuesta del server")
                     // console.log(response);
                     // window.location.href='listar';
-                    this.back();
+                    // this.back();
 				})
 				.catch((error) => {
 					console.log(error);
 				});
+
+            this.back();
 
 
 

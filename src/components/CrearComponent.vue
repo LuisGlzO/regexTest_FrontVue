@@ -73,13 +73,14 @@ export default {
                     // console.log("Luego de esto va la respuesta del server")
                     // console.log(response);
                     // window.location.href='listar';
-                    // this.back();
+                    this.back();
 				})
 				.catch((error) => {
+                    this.back();
 					console.log(error);
 				});
 
-            this.back();
+            // this.back();
 
 
 
